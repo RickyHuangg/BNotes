@@ -1,0 +1,63 @@
+.text1 {
+  position: relative;
+}
+
+.bookSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+}
+
+.book > img {
+  margin-right: 20px;
+  margin-right: 20px;
+  height: fit-content;
+  max-width: 25%;
+}
+
+.books {
+  margin-left: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.btns {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 5%;
+  margin-top: 2rem;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bookEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

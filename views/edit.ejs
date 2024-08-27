@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header.ejs') %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/editReview/<%=books.id %>" method="post">
+      <div class="bookEdit">
+        <img
+          src="//covers.openlibrary.org/b/id/<%= books.coverid %>-M.jpg"
+          alt="Book Cover"
+        />
+
+        >
+        <h3><%= books.title %> by <%= books.author %></h3>
+        <h1>Edit Review</h1>
+
+        <textarea name="update" id="update" rows="5" cols="33">
+<%= books.review_text %></textarea
+        >
+        <input class="btn btn-light submit my-4" type="submit" value="SAVE" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header.ejs') %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bookSearch">
+      <form action="/add" method="post">
+        <input
+          type="text"
+          name="book"
+          autofocus
+          placeholder="<%= locals.error ? error :  'Enter Exact Book Name'%>"
+        />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <div class="books">
+      <% locals.books.forEach(book => { %>
+      <div class="book">
+        <img
+          src="//covers.openlibrary.org/b/id/<%= book.coverid %>-M.jpg"
+          alt="Book Cover"
+        />
+
+        <div class="details">
+          <h1><%=book.title%></h1>
+          <h2>by <%=book.author%></h2>
+
+          <p><%=book.review_text%></p>
+        </div>
+        <div class="btns">
+          <button class="btn btn-info fw-bolder">
+            <a href="/edit/<%=book.id%>">Edit</a>
+          </button>
+          <form action="/delete/<%=book.id%>" method="post">
+            <input
+              class="btn btn-danger fw-bolder"
+              type="submit"
+              value="Delete"
+            />
+          </form>
+        </div>
+      </div>
+
+      <%}); %>
+    </div>
+  </body>
+</html>
