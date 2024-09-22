@@ -38,6 +38,11 @@
   margin-top: 2rem;
 }
 
+.write {
+  inline-size: 150px;
+  overflow-wrap: break-word;
+}
+
 .cover {
   display: flex;
   flex-direction: column;
@@ -60,4 +65,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 90%;
+  }
+  .auth {
+    font-size: 90%;
+  }
+  .write {
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    font-size: 70%;
+  }
 }
